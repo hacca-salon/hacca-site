@@ -5,9 +5,20 @@ export const resources = {
         title: '五感を満たし、あなたの美しさを目覚めさせるサロン',
         cta: 'ご予約',
       },
+      information: {
+        title: 'Information',
+        items: {
+          info1: { title: '店舗を移転致しました',date: '2025-04-17', description: 'とても綺麗な新店舗です。\n■新住所\n159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000\n■新電話番号\n079-6776-848\nこれからもよろしくお願い致します。', image: '../public/hero_1.jpg' },
+          info2: { title: '',date: '2025-04-17', description: '', image: '' },
+          info3: { title: '',date: '2025-04-17', description: '', image: '' },
+          info4: { title: '',date: '2025-04-17', description: '', image: '' },
+          info5: { title: '',date: '2025-04-17', description: '', image: '' },
+        },
+      },
+      
       about: {
         title: 'About hacca',
-        description: '2016年にオープンしたhaccaは、お客様一人一人の個性を大切にし、ナチュラルで心地よいスタイルを提案するヘアサロンです。日本人スタイリストによる確かな技術と、リラックスできる空間で、あなたらしい美しさを引き出します。',
+        description: '2016年にオープンしたHaccaは、お客様一人一人の個性を大切にしながら、【なりたい】をかなえる努力を致します。ご縁を大切に心地よい空間と丁寧な施術、接客を大事にする日本式ヘアサロンです。あなたらしい美しさを引き出すために髪の土台となる髪と頭皮のケアを私たちは大切にしています。',
       },
       menu: {
         title: 'Menu',
@@ -225,9 +236,24 @@ export const resources = {
         title: 'Tâm hồn bạn thư thái, mái tóc bạn tỏa sáng.',
         cta: 'Đặt lịch hẹn',
       },
+      information: {
+        title: 'Information',
+        items: {
+          info1: {
+      title: 'Cửa hàng đã chuyển đến địa điểm mới',
+      date: '2025-04-17',
+      description: 'Cửa hàng mới rất đẹp.\n■ Địa chỉ mới\n159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000\n■ Số điện thoại mới\n079-6776-848\nMong nhận được sự ủng hộ tiếp tục từ quý khách.',
+      image: '../public/hero_1.jpg'
+    },
+    info2: { title: '', date: '', description: '', image: '' },
+    info3: { title: '', date: '', description: '', image: '' },
+    info4: { title: '', date: '', description: '', image: '' },
+    info5: { title: '', date: '', description: '', image: '' },
+        },
+      },
       about: {
         title: 'About hacca',
-        description: 'Được thành lập vào năm 2016, hacca là salon tóc chuyên tạo kiểu tóc tự nhiên và thoải mái, tôn trọng cá tính của từng khách hàng. Với kỹ thuật chuyên nghiệp của các stylist Nhật Bản và không gian thư giãn, chúng tôi sẽ giúp bạn tỏa sáng theo cách riêng của mình.',
+        description: 'Được khai trương vào năm 2016, Hacca luôn trân trọng cá tính của từng khách hàng và nỗ lực hiện thực hóa “điều bạn mong muốn”. Là một salon tóc phong cách Nhật Bản, chúng tôi coi trọng mối duyên giữa khách và salon, mang đến không gian thoải mái cùng dịch vụ và phục vụ tận tâm. Để tôn lên vẻ đẹp riêng của bạn, chúng tôi đặc biệt chú trọng chăm sóc mái tóc và da đầu – nền tảng cho mái tóc khỏe mạnh và rạng rỡ.',
       },
       menu: {
         title: 'Dịch vụ & Bảng giá',
@@ -445,9 +471,24 @@ export const resources = {
         title: 'Awaken your beauty, indulge your senses',
         cta: 'Book Now',
       },
+    information: {
+        title: 'Information',
+        items: {
+          info1: {
+      title: 'We have relocated our store',
+      date: '2025-04-17',
+      description: 'Our new store is very beautiful.\n■ New Address\n159 Nguyễn Du Street, Ben Thanh Ward, District 1, Ho Chi Minh City 700000\n■ New Phone Number\n079-6776-848\nThank you for your continued support.',
+      image: '../public/hero_1.jpg'
+    },
+    info2: { title: '', date: '', description: '', image: '' },
+    info3: { title: '', date: '', description: '', image: '' },
+    info4: { title: '', date: '', description: '', image: '' },
+    info5: { title: '', date: '', description: '', image: '' },
+        },
+      },
       about: {
         title: 'About hacca',
-        description: 'Established in 2016, hacca is a hair salon that values each customer\'s individuality and proposes natural, comfortable styles. With the skilled techniques of Japanese stylists and a relaxing space, we bring out your unique beauty.',
+        description: 'Opened in 2016, Hacca cherishes each customer’s individuality and strives to make the “look you desire” a reality. As a Japanese-style hair salon, we value the connection with our guests, offering a comfortable atmosphere along with attentive treatments and service. To bring out your unique beauty, we place great importance on caring for the hair and scalp—the foundation of healthy, beautiful hair.',
       },
       menu: {
         title: 'Menu',

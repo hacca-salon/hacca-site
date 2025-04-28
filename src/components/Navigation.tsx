@@ -8,6 +8,7 @@ export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
+    { href: '#information', label: 'information' },
     { href: '#about', label: 'About' },
     { href: '#menu', label: 'Menu' },
     { href: '#staff', label: 'Staff' },

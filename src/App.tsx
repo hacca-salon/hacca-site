@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Hero } from './components/Hero';
+import { Information } from './components/Information';
 import { About } from './components/About';
 import { Menu } from './components/Menu';
 import { Staff } from './components/Staff';
@@ -32,6 +33,7 @@ function App() {
       </header>
       <main className="relative z-0">
         <Hero />
+        <Information />
         <About />
         <Menu />
         <Staff />

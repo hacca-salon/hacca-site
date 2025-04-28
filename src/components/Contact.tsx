@@ -45,7 +45,7 @@ export const Contact: React.FC = () => {
             </div>
 
             <a
-              href="https://www.facebook.com/haccaforhair/?profile_tab_item_selected=mentions&_rdr"
+              href="https://line.me/R/ti/p/%40ktc3244q"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary hover:bg-primary-dark transition-colors duration-300 text-white px-8 py-4 rounded-full font-medium mt-8"

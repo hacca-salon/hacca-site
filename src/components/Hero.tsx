@@ -116,7 +116,7 @@ export const Hero: React.FC = () => {
             目覚めさせるサロン
           </motion.h1>
           <motion.a
-            href="https://www.facebook.com/haccaforhair/?profile_tab_item_selected=mentions&_rdr"
+            href="https://line.me/R/ti/p/%40ktc3244q"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-primary hover:bg-primary-dark transition-all duration-300 text-white px-12 py-4 rounded-full font-medium text-lg mt-8 hover:scale-105 transform"
