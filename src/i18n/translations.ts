@@ -8,7 +8,7 @@ export const resources = {
       information: {
         title: 'Information',
         items: {
-          info1: { title: '店舗を移転致しました',date: '2025-04-17', description: 'とても綺麗な新店舗です。\n■新住所\n159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000\n■新電話番号\n079-6776-848\nこれからもよろしくお願い致します。', image: '../public/hero_1.jpg' },
+          info1: { title: '店舗を移転致しました',date: '2025-04-17', description: 'とても綺麗な新店舗です。\n■新住所\n159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000\n■新電話番号\n079-6776-848\nこれからもよろしくお願い致します。', image: '/hero_1.jpg' },
           info2: { title: '',date: '2025-04-17', description: '', image: '' },
           info3: { title: '',date: '2025-04-17', description: '', image: '' },
           info4: { title: '',date: '2025-04-17', description: '', image: '' },
@@ -243,7 +243,7 @@ export const resources = {
       title: 'Cửa hàng đã chuyển đến địa điểm mới',
       date: '2025-04-17',
       description: 'Cửa hàng mới rất đẹp.\n■ Địa chỉ mới\n159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000\n■ Số điện thoại mới\n079-6776-848\nMong nhận được sự ủng hộ tiếp tục từ quý khách.',
-      image: '../public/hero_1.jpg'
+      image: '/hero_1.jpg'
     },
     info2: { title: '', date: '', description: '', image: '' },
     info3: { title: '', date: '', description: '', image: '' },
@@ -478,7 +478,7 @@ export const resources = {
       title: 'We have relocated our store',
       date: '2025-04-17',
       description: 'Our new store is very beautiful.\n■ New Address\n159 Nguyễn Du Street, Ben Thanh Ward, District 1, Ho Chi Minh City 700000\n■ New Phone Number\n079-6776-848\nThank you for your continued support.',
-      image: '../public/hero_1.jpg'
+      image: '/hero_1.jpg'
     },
     info2: { title: '', date: '', description: '', image: '' },
     info3: { title: '', date: '', description: '', image: '' },
