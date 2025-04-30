@@ -62,7 +62,7 @@ export const Contact: React.FC = () => {
           >
             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
               <img
-                src="/map3.png"
+                src="/map4.jpg"
                 alt="Map location"
                 className="w-full h-full object-cover"
               />
