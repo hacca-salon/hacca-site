@@ -2,7 +2,7 @@ export const resources = {
   jp: {
     translation: {
       hero: {
-        title: '五感を満たし、あなたの美しさを目覚めさせるサロン',
+        title: '五感を満たし、<0/>あなたの美しさを目覚めさせるサロン',
         cta: 'ご予約',
       },
       information: {
@@ -43,11 +43,7 @@ export const resources = {
         items: {
           cutTopStylist: {
             title: 'カット（トップスタイリスト）',
-            price: '700,000',
-          },
-          cutJrStylist: {
-            title: 'カット（ジュニアスタイリスト）',
-            price: '400,000',
+            price: '800,000',
           },
           bangs: {
             title: '前髪カット',
@@ -55,11 +51,11 @@ export const resources = {
           },
           student: {
             title: '学生カット',
-            price: '500,000',
+            price: '600,000',
           },
           kids: {
             title: 'キッズカット',
-            price: '400,000',
+            price: '500,000',
           },
           reset: {
             title: 'リセット',
@@ -278,11 +274,7 @@ export const resources = {
         items: {
           cutTopStylist: {
             title: 'Cắt (Top Stylist)',
-            price: '700,000',
-          },
-          cutJrStylist: {
-            title: 'Cắt (Jr Stylist)',
-            price: '400,000',
+            price: '800,000',
           },
           bangs: {
             title: 'Cắt mái',
@@ -290,11 +282,11 @@ export const resources = {
           },
           student: {
             title: 'Cắt cho học sinh',
-            price: '500,000',
+            price: '600,000',
           },
           kids: {
             title: 'Cắt cho trẻ em',
-            price: '400,000',
+            price: '500,000',
           },
           reset: {
             title: 'Reset',
@@ -513,23 +505,19 @@ export const resources = {
         items: {
           cutTopStylist: {
             title: 'Cut (Top Stylist)',
-            price: '700,000',
+            price: '800,000',
           },
-          cutJrStylist: {
-            title: 'Cut (Jr Stylist)',
-            price: '400,000',
-          },
-          bangs: {
+           bangs: {
             title: 'Bangs Cut',
             price: '100,000',
           },
           student: {
             title: 'Student Cut',
-            price: '500,000',
+            price: '600,000',
           },
           kids: {
             title: 'Kids Cut',
-            price: '400,000',
+            price: '500,000',
           },
           reset: {
             title: 'Reset',

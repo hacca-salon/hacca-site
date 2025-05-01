@@ -11,7 +11,7 @@ export const Menu: React.FC = () => {
     {
       id: 'cut',
       icon: <Scissors className="w-8 h-8" />,
-      items: ['cutTopStylist', 'cutJrStylist', 'bangs', 'student', 'kids', 'reset'],
+      items: ['cutTopStylist', 'bangs', 'student', 'kids', 'reset'],
     },
     {
       id: 'set',

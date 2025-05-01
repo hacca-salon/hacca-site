@@ -1,50 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation, Trans } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  const images = [
-    '/hero_1.jpg',
-    '/hero_2.jpg',
-    '/hero_3.jpg',
-  ];
+  const images = ['/hero_1.jpg', '/hero_2.jpg', '/hero_3.jpg'];
 
   useEffect(() => {
     const preloadImages = async () => {
       try {
-        const imagePromises = images.map((src) => {
-          return new Promise((resolve, reject) => {
+        const imagePromises = images.map((src) =>
+          new Promise((resolve, reject) => {
             const img = new Image();
             img.src = src;
             img.onload = resolve;
-            img.onerror = (error) => {
-              console.error(`Failed to load image: ${src}`, error);
-              reject(error);
-            };
-          });
-        });
-
+            img.onerror = reject;
+          })
+        );
         await Promise.all(imagePromises);
         setImagesLoaded(true);
       } catch (error) {
         console.error('Error preloading images:', error);
       }
     };
-
     preloadImages();
   }, []);
 
   useEffect(() => {
     if (!imagesLoaded) return;
-
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [imagesLoaded]);
 
@@ -52,37 +41,26 @@ export const Hero: React.FC = () => {
     <section className="relative h-screen overflow-hidden bg-black">
       <div className="absolute inset-0">
         {imagesLoaded && (
-          <>
-            {/* Current Image */}
+          <>  {/* Cross-fade current and previous images */}
             <motion.div
               key={`current-${currentImageIndex}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ 
-                duration: 2,
-                ease: "easeInOut"
-              }}
+              transition={{ duration: 2, ease: 'easeInOut' }}
               className="absolute inset-0"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${images[currentImageIndex]})`,
-                }}
+                style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/30" />
               </div>
             </motion.div>
-
-            {/* Previous Image (for cross-fade effect) */}
             <motion.div
               key={`prev-${currentImageIndex}`}
               initial={{ opacity: 1 }}
               animate={{ opacity: 0 }}
-              transition={{ 
-                duration: 2,
-                ease: "easeInOut"
-              }}
+              transition={{ duration: 2, ease: 'easeInOut' }}
               className="absolute inset-0"
             >
               <div
@@ -97,7 +75,7 @@ export const Hero: React.FC = () => {
           </>
         )}
       </div>
-      
+
       <div className="relative h-full flex items-center justify-center text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -105,16 +83,19 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-white max-w-3xl"
         >
-          <motion.h1 
+          {/* Hero title now supports HTML breaks via Trans */}
+          <motion.h1
             className="font-noto-jp text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight tracking-[.25em] font-extralight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            五感を満たし、<br className="hidden sm:block" />
-            あなたの美しさを<br className="hidden sm:block" />
-            目覚めさせるサロン
+            <Trans
+              i18nKey="hero.title"
+              components={[<br className="hidden sm:block" key="br" />]}
+            />
           </motion.h1>
+
           <motion.a
             href="https://line.me/R/ti/p/%40ktc3244q"
             target="_blank"
