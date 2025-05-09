@@ -82,7 +82,7 @@ export const Contact: React.FC = () => {
               className="inline-flex items-center justify-center w-full bg-primary hover:bg-primary-dark transition-colors duration-300 text-white px-6 py-3 rounded-full font-medium gap-2"
             >
               <ExternalLink size={20} />
-              Google Maps で見る
+              Open the map app
             </a>
           </motion.div>
         </div>
