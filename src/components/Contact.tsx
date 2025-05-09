@@ -6,7 +6,10 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 
 export const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const [address] = useLocalStorage('address', '159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000');
+  const [address] = useLocalStorage(
+    'address',
+    '159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000'
+  );
 
   return (
     <section id="contact" className="py-20">
@@ -21,6 +24,7 @@ export const Contact: React.FC = () => {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
+          {/* 左カラム */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -43,7 +47,6 @@ export const Contact: React.FC = () => {
               <Calendar className="text-primary flex-shrink-0" />
               <p>{t('contact.holiday')}</p>
             </div>
-
             <a
               href="https://line.me/R/ti/p/%40ktc3244q"
               target="_blank"
@@ -54,6 +57,7 @@ export const Contact: React.FC = () => {
             </a>
           </motion.div>
 
+          {/* 右カラム：Google Maps 埋め込み */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,10 +65,14 @@ export const Contact: React.FC = () => {
             className="space-y-4"
           >
             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="/map4.jpg"
-                alt="Map location"
-                className="w-full h-full object-cover"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.508575553151!2d106.6927827!3d10.7723058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3eb6ad4c2f%3A0x6df0130a52a4bcc4!2zSGFjY2EgKOOCouODg-OCq--8iWZvciBoYWly!5e0!3m2!1sja!2sjp!4v1746752959927!5m2!1sja!2sjp"
+                className="w-full h-full"
+                frameBorder="0"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
             <a
