@@ -74,6 +74,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
           <li>
             <a
               href="https://vn.salondenet-beauty.com/shopdetail/3"
+              target="_blank"
               className="w-full flex items-center px-4 py-2 sm:px-6 sm:py-3 border rounded hover:bg-gray-100"
             >
               <img
