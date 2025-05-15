@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Calendar, ExternalLink } from 'lucide-react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
+import { ReservationModal } from "./ReservationModal";
 
 export const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const [address] = useLocalStorage(
-    'address',
-    '159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000'
-  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const address = '159 Đ. Nguyễn Du, Phường Bến Thành, Quận 1, Hồ Chí Minh 700000';
 
   return (
     <section id="contact" className="py-20">
@@ -47,14 +46,17 @@ export const Contact: React.FC = () => {
               <Calendar className="text-primary flex-shrink-0" />
               <p>{t('contact.holiday')}</p>
             </div>
-            <a
-              href="https://line.me/R/ti/p/%40ktc3244q"
-              target="_blank"
-              rel="noopener noreferrer"
+
+            {/* モーダルを開くボタン */}
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="inline-block bg-primary hover:bg-primary-dark transition-colors duration-300 text-white px-8 py-4 rounded-full font-medium mt-8"
             >
               {t('contact.book')}
-            </a>
+            </button>
+
+            {/* モーダル */}
+           <ReservationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           </motion.div>
 
           {/* 右カラム：Google Maps 埋め込み */}
@@ -82,7 +84,7 @@ export const Contact: React.FC = () => {
               className="inline-flex items-center justify-center w-full bg-primary hover:bg-primary-dark transition-colors duration-300 text-white px-6 py-3 rounded-full font-medium gap-2"
             >
               <ExternalLink size={20} />
-              Open the map app
+              {t('contact.openMap')}
             </a>
           </motion.div>
         </div>
